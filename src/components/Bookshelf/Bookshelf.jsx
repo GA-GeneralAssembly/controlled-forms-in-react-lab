@@ -17,15 +17,10 @@ const Bookshelf = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    if (newBook.title.trim() === "" || newBook.author.trim() === "") {
-      alert("Please fill in both fields!");
-      return
-    }
-
     setBooks([...books, newBook])
     setNewBook({ title: "", author: "" })
   }
-  
+
   return (
     <div className="bookshelfDiv">
       {
